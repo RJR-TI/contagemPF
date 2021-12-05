@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <script language="JavaScript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <h3>Calcular APF</h3>
+
+    <div>
+      <form method="GET">
+        <label for="function">Insira a função:</label>
+        <input type="text" id="function" name="function" placeholder="Função" />
+
+        <label>Tipo</label>
+        <select id="type" name="type">
+          <option value=""></option>
+          <option value="ali">ALI</option>
+          <option value="aie">AIE</option>
+          <option value="ee">EE</option>
+          <option value="se">SE</option>
+          <option value="ce">CE</option>
+        </select>
+
+        <label for="typeFunc">Tipo de manutenção:</label>
+        <select id="typeFunc" name="typeFunc">
+          <option value="i">Inclusão</option>
+          <option value="a">Alteração</option>
+          <option value="e">Exclusão</option>
+        </select>
+
+        <label for="td">Tipo de dados (DETs):</label>
+        <input type="text" id="td" name="td" placeholder="Insira o valor" />
+
+        <label for="td"
+          >AR/TR - Arquivos Referenciados/ Tipos de Registro:</label
+        >
+        <input type="text" id="tr" name="tr" placeholder="Insira o valor" />
+        <input onclick="calcularAPF()" id="click" type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
