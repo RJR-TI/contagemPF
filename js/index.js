@@ -50,38 +50,47 @@ function addItemToDOM(text) {
 
   // //ALI
   if (
-    (type == "ali" && TD <= 50) ||
-    (type == "ali" && TD <= 20 && TR == NULL)
+    (type == "ali" && TD <= 50 && TR<=5) ||
+    (type == "ali" && TD >=20 && TD<=50 && TR == 1)
   ) {
     let PF = " ALI => complexidade: Baixa PF = 7";
     item.innerText = `Função: ${text} resultado: ${PF}`;
   }
 
-  if (type == "ali" && TR >= 6 && TD >= 20) {
+  if ( (type == "ali" && TD >= 51 && TR == 1) || 
+  (type == "ali" && TD >=20 && TD<=50 && TR >=2 && TR<=5) || 
+  (type == "ali" && TD <= 19 && TR >= 6) ) {
     let PF = "ALI => complexidade: Média PF = 10";
     item.innerText = `Função: ${text} resultado: ${PF}`;
   }
 
-  if (type == "ali" && TR >= 2 && TD >= 51) {
+  if((type == "ali" && TD >=20 && TD<=50 && TR >=6) || 
+  (type == "ali" && TD >=51  && TR >=2 && TR<=5) || 
+  (type == "ali" && TD >=51 && TR >=6))
+   {
     let PF = "ALI => complexidade: Alta PF = 15";
     item.innerText = `Função: ${text} resultado: ${PF}`;
   }
 
   //AIE
   if (
-    (type == "aie" && TD <= 50) ||
-    (type == "aie" && TD <= 20 && TR == undefined)
+    (type == "aie" && TD <= 50 && TR<=5) ||
+    (type == "aie" && TD >=20 && TD<=50 && TR == 1)
   ) {
     let PF = "AIE => complexidade: Baixa PF = 5";
     item.innerText = `Função: ${text} resultado: ${PF}`;
   }
 
-  if (type == "aie" && TR >= 6 && TD >= 20) {
+  if ((type == "aie" && TD >= 51 && TR == 1) || 
+  (type == "aie" && TD >=20 && TD<=50 && TR >=2 && TR<=5) || 
+  (type == "aie" && TD <= 19 && TR >= 6)) {
     let PF = "AIE => complexidade: Média PF = 7";
     item.innerText = `Função: ${text} resultado: ${PF}`;
   }
 
-  if (type == "aie" && TR >= 2 && TD >= 51) {
+  if (((type == "aie" && TD >=20 && TD<=50 && TR >=6) || 
+  (type == "aie" && TD >=51  && TR >=2 && TR<=5) || 
+  (type == "aie" && TD >=51 && TR >=6))) {
     let PF = "AIE => complexidade: Alta PF = 10";
     item.innerText = `Função: ${text} resultado: ${PF}`;
   }
